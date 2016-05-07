@@ -1,0 +1,17 @@
+/*Keri Ritenour
+  Week 1 - Assignment - Grocery List
+  FrontEnd Frameworks
+*/
+
+body{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background-color: rgb(75, 165, 157);
+}
+
+h1{
+    font-family: 'Roboto';
+    font-size: 20px;
+}
