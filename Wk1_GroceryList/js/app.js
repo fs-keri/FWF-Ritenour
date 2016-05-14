@@ -9,7 +9,6 @@ app.controller('ListController', function($scope){
     $scope.addItem = function(){
 
 
-
         $scope.groceries.push($scope.newItem);
 
         $scope.newItem= '';
@@ -21,3 +20,5 @@ app.controller('ListController', function($scope){
     }
 
 });
+
+// should use string.length and array.indexOf() to validate no duplicates??
