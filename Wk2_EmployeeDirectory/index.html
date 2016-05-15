@@ -17,3 +17,68 @@ Week 2 - Employee Directory
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,800,400italic' rel='stylesheet' type='text/css'>
 </head>
+
+<body ng-app="myApp">
+
+<div id="container" ng-controller="EmployeeController">
+
+    <h1>Employee Directory</h1>
+
+    <!--Employee Entry Form-->
+    <div id="entryForm">
+
+        <h2>Add an Entry</h2>
+
+        <div id="formSection">
+            <form>
+                <h3>Position</h3>
+                <input type="text" ng-model="empPosition" />
+                <h3>Name</h3>
+                <input type="text" ng-model="empName" />
+                <h3>Street Address
+                    <input type="text" ng-model="empAddress" />
+                    <h3>City</h3>
+                    <input id="cityInput" type="text" ng-model="empCity" />
+                    <h3>State</h3>
+                    <input id="stateInput" type="text" ng-model="empState" />
+                    <h3>Zipcode</h3>
+                    <input id="zipInput" type="text" ng-model="empZip" />
+                    <h3>Phone Number</h3>
+                    <input type="text" ng-model="empPhone" />
+
+                    <input type="submit" name="addEmp" id="addEmp" value="Add Employee" ng-click="addEmployee()" />
+            </form>
+        </div>
+    </div><!--End of Employee Entry Form-->
+
+
+    <!--Employee Directory-->
+    <div id="directoryList">
+
+        <div class="emp" ng-repeat="emp in employeeArray track by $id($index)">
+            <div class="name-title">
+                <img src="images/people.png" />
+                <img src="images/garbage.png" class="deleteEmp" ng-click="deleteEmployee(emp)" title="Delete Employee" alt="Delete Employee" />
+                <h3>{{ emp.name }}</h3>
+                <h4>{{ emp.position }}</h4>
+            </div>
+
+            <div class="info">
+                <p>{{ emp.address }}<br>
+                    {{ emp.city }}, {{ emp.state }} {{ emp.zip }}</p>
+                <p>{{ emp.phone }}</p>
+            </div>
+        </div>
+    </div><!--End Employee Directory-->
+</div>
+
+
+<!--Footer-->
+<footer>
+</footer><!--End Footer-->
+
+
+
+
+</body> <!--End body-->
+</html>

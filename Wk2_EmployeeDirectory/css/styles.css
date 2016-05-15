@@ -1,0 +1,287 @@
+/* Keri Ritenour
+   Week 2 - Employee Directory
+*/
+
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #8b9d93;
+    position: relative;
+}
+
+#container {
+    width: 94%;
+    padding: 0 3%;
+    overflow: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+
+#entryForm, #directoryList {
+    float: left;
+}
+
+#entryForm {
+    width: 40%;
+    padding: 1%;
+    background: #ffffff;
+    margin: 0 2% 3% 0;
+}
+
+#formSection {
+    padding: 2% 4% 3%;
+    overflow: auto;
+}
+
+#directoryList {
+    width: 50%;
+}
+
+.emp {
+    width: 47%;
+    margin: 0 1.5% 3%;
+    float: left;
+}
+
+.emp img {
+    float: left;
+    margin: .2em;
+    padding: 0 .5em;
+}
+
+.name-title {
+    background: #0a3142;
+    padding: .5em .5em .5em .5em;
+    position: relative;
+    color: #fff;
+
+}
+
+.info {
+    padding: .5em 1em;
+    font-size: 90%;
+    background: #fff;
+}
+
+h1 {
+    color: #555555;
+    font-size: 330%;
+    margin: 3% 0;
+    padding: 0 0 3px 20px;
+    border-bottom: 1px solid #555555;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 1%;
+    text-align: center;
+    color: #555555;
+    font-size: 180%;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0a3142;
+}
+
+h3 {
+    margin: 0;
+}
+
+form.ng-pristine.ng-valid {
+    color: #555555;
+}
+
+h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: normal;
+    padding-top: 0.5%;
+    font-size: 85%;
+}
+
+footer {
+    width: 100%;
+    margin: 20px auto;
+    text-align: left;
+    color: #555555;
+    font-size: 60%;
+    line-height: 150%;
+    letter-spacing: 1px;
+    padding: .3em;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+    color: #cad8ce;
+    text-decoration: none;
+}
+
+.info > p {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.deleteEmp {
+    position: absolute;
+    right: 0;
+    margin: 0 3%;
+}
+
+.deleteEmp:hover {
+    cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+    width: 95.6%;
+    padding: 2% 2%;
+    font-size: 100%;
+    border: 1px solid #595241;
+    margin: 0 0 4% 0;
+    background-color: #f7f8f7;
+}
+
+#cityInput {
+    width: 43%;
+}
+
+#stateInput {
+    width: 15%;
+}
+
+#zipInput {
+    width: 23.5%;
+}
+
+#addEmp {
+    padding: 1em 1em;
+    background: #8b9d93;
+    font-size: 80%;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+#addEmp:hover {
+    background: #0a3142;
+}
+
+@media only screen
+and (max-width : 1330px) {
+
+    #stateInput {
+        margin-left: 0.6%;
+        margin-right: 0.6%;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 100%;
+    }
+
+}
+
+
+/* Tablets (portrait) */
+@media only screen and (min-device-width: 768px)and (max-device-width: 899px)and (orientation: portrait),(min-width : 768px)and (max-width : 899px) {
+
+    h2 {
+        font-size: 130%;
+    }
+
+    .emp {
+        width: 100%;
+    }
+
+    #cityInput, #stateInput, #zipInput {
+        width: 95.6%;
+    }
+
+    #stateInput {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/* Phones (portrait & landscape)*/
+@media only screen and (max-device-width: 767px), (max-width : 767px) {
+    #entryForm, #directoryList {
+        float: none;
+        width: 100%;
+    }
+
+    #entryForm {
+        margin-top: 30px;
+    }
+
+    .emp {
+        width: 47%;
+        margin: 0 1.5% 3%;
+        float: left;
+    }
+
+    #cityInput {
+        width: 43%;
+    }
+
+    #stateInput {
+        width: 10%;
+    }
+
+    #zipInput {
+        width: 22%;
+    }
+
+    input[type="text"], input[type="email"] {
+        margin: 0 0 1% 0;
+    }
+
+    #addEmp {
+        margin-top: 1%;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+}
+
+
+@media only screen and (max-device-width: 580px), (max-width : 580px) {
+    .emp {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+/* Phones (portrait or landscape) */
+@media only screen and (max-device-width: 500px), (max-width : 500px) {
+    #cityInput, #stateInput, #zipInput {
+        width: 95.6%;
+    }
+
+    #stateInput {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h1 {
+        font-size: 200%;
+        text-align: center;
+    }
+
+    input[type="text"], input[type="email"] {
+        margin: 0 0 2% 0;
+    }
+}
