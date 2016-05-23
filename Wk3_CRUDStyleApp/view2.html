@@ -1,0 +1,62 @@
+<!--
+Keri Ritenour
+Week 3 - CRUD Style Application
+View 2 - Projects
+-->
+
+
+<div id="container">
+<div ng-controller="projectController">
+
+
+        <h1>Projects</h1>
+
+        <!--Project Entry Form-->
+        <div id="entryForm">
+
+            <h2>Add a Project</h2>
+
+            <div id="formSection">
+                <form>
+                    <h3>Project Name</h3>
+                    <input type="text" ng-model="projName" />
+                    <h3>Project Manager</h3>
+                    <input type="text" ng-model="projMan" />
+                    <h3>Start Date</h3>
+                        <input type="text" ng-model="projStart" />
+                        <h3>Prototype Due</h3>
+                        <input type="text" ng-model="projProto" />
+                        <h3>End Date</h3>
+                        <input type="text" ng-model="projEnd" />
+
+                        <input type="submit" name="addProj" id="addProj" value="Add Project" ng-click="addProject()" />
+                </form>
+            </div>
+        </div><!--End of Project Entry Form-->
+
+
+        <!--Project Directory-->
+        <div id="projectList">
+
+            <div class="proj" ng-repeat="proj in projectArray track by $id($index)">
+                <div class="name-title">
+                    <img src="images/garbage.png" class="deleteProj" ng-click="deleteProject(proj)" title="Delete Project" alt="Delete Project" />
+                    <h3>{{ proj.project }}</h3>
+                    <h4>Manager: {{ proj.manager }}</h4>
+                </div>
+
+                <div class="info">
+                    <p>Start Date: {{ proj.start }}<br>
+                        Prototype Due: {{ proj.prototype }}<br>
+                        End Date: {{ proj.end }}</p>
+                </div>
+            </div>
+        </div><!--End Project Directory-->
+    </div>
+</div>
+
+
+
+
+
+

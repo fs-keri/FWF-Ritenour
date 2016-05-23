@@ -1,0 +1,60 @@
+<!--
+Keri Ritenour
+Week 3 - CRUD Style Application
+View 1 - Contacts
+-->
+
+<div ng-controller="contactController">
+    <h1>Contacts</h1>
+
+    <div id="entryForm">
+
+     <h2>Add a Contact</h2>
+
+     <div id="formSection">
+         <form>
+             <h3>Position</h3>
+             <input type="text" ng-model="conPosition" />
+             <h3>Name</h3>
+             <input type="text" ng-model="conName" />
+             <h3>Street Address</h3>
+                 <input type="text" ng-model="conAddress" />
+                 <h3>City</h3>
+                 <input id="cityInput" type="text" ng-model="conCity" />
+                 <h3>State</h3>
+                 <input id="stateInput" type="text" ng-model="conState" />
+                 <h3>Zipcode</h3>
+                 <input id="zipInput" type="text" ng-model="conZip" />
+                 <h3>Phone Number</h3>
+                 <input type="text" ng-model="conPhone" />
+                 <h3>Email Address</h3>
+                 <input type="text" ng-model="conMail" />
+
+                 <input type="submit" name="addCon" id="addCon" value="Add Contact" ng-click="addContact()" />
+         </form>
+     </div>
+     </div>
+
+ <!--Contact Directory-->
+ <div id="contactList">
+
+     <div class="con" ng-repeat="con in contactArray track by $id($index)">
+         <div class="name-title">
+             <img src="images/people.png" />
+             <img src="images/garbage.png" class="deleteCon" ng-click="deleteContact(con)" title="Delete Contact" alt="Delete Contact" />
+             <h3>{{ con.name }}</h3>
+             <h4>{{ con.position }}</h4>
+         </div>
+
+         <div class="info">
+             <p>{{ con.address }}<br>
+                 {{ con.city }}, {{ con.state }} {{ con.zip }}<br>
+             {{ con.phone }}<br>
+             {{ con.email }}</p>
+
+         </div>
+     </div>
+ </div><!--End Contact List-->
+
+</div>
+</div>

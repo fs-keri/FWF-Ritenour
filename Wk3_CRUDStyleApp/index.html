@@ -1,0 +1,47 @@
+<!--
+Keri Ritenour
+Week 3 - CRUD Style Application
+Index
+-->
+
+<html>
+<head>
+
+
+    <title>Project Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JavaScript, Angular, CSS, Google Fonts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/dataService.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,800,400italic' rel='stylesheet' type='text/css'>
+</head>
+<div id="container">
+<body ng-app="myApp">
+
+
+
+    <h1>My Project Manager</h1>
+
+    <!--Navigation-->
+    <nav>
+        <a href="#/view1"><input type="button" value="Contacts" class="navBar" /></a>
+        <a href="#/view2"><input type="button" value="Projects" class="navBar" /></a>
+        <a href="#/view3/email"><input type="button" value="Tasks" class="navBar" /></a>
+    </nav>
+
+
+    <div ng-view></div>
+
+</div>
+
+<!--Footer-->
+<footer>
+</footer><!--End Footer-->
+
+
+</body> <!--End body-->
+</html>

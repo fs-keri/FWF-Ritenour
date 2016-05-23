@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Routing Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body ng-app="myApp">
+    <h1>Intro to Data Binding</h1>
+    <div ng-controller="DBController">
+        <input type="text" ng-model="userName"/>
+            <input type="submit" ng-click="addName()" />
+            <p>Hello, {{userName}}.</p>
+
+            <ul>
+                <li ng-repeat="name in nameArray">
+                    {{ name }}
+                    <button ng-click="deleteName(name)">X</button>
+                </li>
+
+            </ul>
+    </div>
+
+
+</body>
+</html>

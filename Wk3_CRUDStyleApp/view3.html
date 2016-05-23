@@ -1,0 +1,48 @@
+<!--
+Keri Ritenour
+Week 3 - CRUD Style Application
+View 3 - Tasks
+-->
+
+
+<div ng-controller="taskController">
+    <h1>Tasks</h1>
+
+    <!--Tasks Entry Form-->
+    <div id="entryForm">
+        <h2>The task of the day is: {{ anyWord }}</h2>
+
+        <h2>Add a Task</h2>
+
+        <div id="formSection">
+            <form>
+                <h3>Task Name</h3>
+                <input type="text" ng-model="taskName" />
+                <h3>Task Due Date</h3>
+                <input type="text" ng-model="taskDue" />
+                <input type="submit" name="addTask" id="addTask" value="Add Task" ng-click="addTask()" />
+            </form>
+        </div>
+    </div><!--End of Task Entry Form-->
+
+
+    <!--Tasks Directory-->
+    <div id="taskList">
+
+        <div class="task" ng-repeat="task in tasksArray track by $id($index)">
+            <div class="name-title">
+                <img src="images/garbage.png" class="deleteTask" ng-click="deleteTask(tasks)" title="Delete Task" alt="Delete Task" />
+                <h3>{{ task.task }}</h3>
+                <h3>{{ task.due }}</h3>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div><!--End Task Directory-->
+</div>
+
